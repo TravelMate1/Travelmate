@@ -1,0 +1,120 @@
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: #F0F4C3;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #0288D1;
+    padding: 15px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-top: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-right-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.button {
+    background-color: #29B6F6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #0277BD;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+.content {
+    width: 80%;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #37474F;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 40%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+}
+
+.slide:first-child {
+    display: block;
+}
+
+.about-box {
+    padding: 20px;
+    background-color: #4FC3F7;
+    border-radius: 10px;
+    width: 40%;
+    margin-left: 30px;
+}
+
+.about-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #004D40;
+}
+
+.about-box p {
+    font-size: 16px;
+    color: #004D40;
+}
