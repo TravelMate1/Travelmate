@@ -172,3 +172,30 @@ form .linkTxt {
 .wrapper .rotate-bg2 {
     display: none; /* Hides the second background element */
 }
+
+@media (max-width: 440px)
+{
+    .wrapper {
+        display: flex;
+        width: 90vw;
+        height: 60vh;
+        background: var(--white);
+        border: 2px solid var(--black);
+        border-radius: 10px;
+        box-shadow: 0 0 20px var(--black);
+        overflow: hidden;
+        gap: 50px;
+    }
+    
+    .wrapper .form-box {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .wrapper .form-box.register {
+        padding: 10px;
+    }
+}

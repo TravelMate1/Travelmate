@@ -477,18 +477,22 @@ header,
 }
 
   .search-container {
-    width: 80px;  /*adjustment needed*/
+    width: 80px;  
     height: 30px;
     border-radius: 10px;
-    transform: translate(-20vw,10vh);
+    transform: translate(-20vw,8vh);
   }
 
   .search-input {
     border: none;
-    padding: 10px 10px;
+    padding: 29px 0px 4px 3px;
     font-size: 1em;
     outline: none;
     border-radius: 10px 0 0 10px;
+  }
+
+  .search-button{
+    all: unset;
   }
 
   .buttons button {
@@ -496,6 +500,28 @@ header,
     font-size: 1.2em;
   }
   
+  .special {
+    display: flex;
+    flex-direction: row;
+    margin: 65px 0px 0px 6px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .special button {
+    padding: 5px 8px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 2px solid #2e2e2e;
+    background-color: azure;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .insider{
+    top: 7vh;
+  }
+
   .seperation{
     all: unset;
   }
