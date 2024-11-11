@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Images with Descriptions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #ADD8E6;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .profile-button {
+            background-color: #007BFF;
+            /* Changed to blue */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .profile-button:hover {
+            background-color: #0056b3;
+            /* Darker blue on hover */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        /* Slider styling */
+        .slider {
+            display: flex;
+            position: relative;
+            width: 40%;
+            margin-right: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 1.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* Description styling */
+        .description {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .description div {
+            display: none;
+            font-size: 16px;
+            color: #004D40;
+            margin-bottom: 15px;
+        }
+
+        /* Show first description */
+        .description div:first-child {
+            display: block;
+        }
+
+        /* Slider arrows */
+        .slider-arrows {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            transform: translateY(-50%);
+        }
+
+        .slider-arrows button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+        .slider-arrows button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .description div h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../Travelmate/assests/logo.jpg" alt="Company Logo">
+            <div class="header-title">Goa - Cultural Insight</div>
+        </div>
+        <button class="profile-button">Profile</button>
+    </header>
+
+    <div class="container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./images/photo1.jpg" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="./images/WhatsApp Image 2024-10-21 at 7.39.47 AM (1).jpeg" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="./images/WhatsApp Image 2024-10-21 at 7.39.47 AM.jpeg" alt="Image 3">
+                </div>
+                <div class="slide">
+                    <img src="./images/photo4.jpg" alt="Image 4">
+                </div>
+                <div class="slide">
+                    <img src="./images/photo5.jpg" alt="Image 5">
+                </div>
+                <div class="slide">
+                    <img src="./images/WhatsApp Image 2024-10-21 at 7.39.48 AM (1).jpeg" alt="Image 6">
+                </div>
+            </div>
+
+            <div class="slider-arrows">
+                <button id="prev">‹</button>
+                <button id="next">›</button>
+            </div>
+        </div>
+
+        <div class="description">
+            <div>
+                <h2>Bom Jesus</h2><br>Bom Jesus Basilica in Goa is a UNESCO World Heritage Site and one of the most
+                iconic churches in India. Built in 1605, it is renowned for its baroque architecture and holds the
+                mortal remains of St. Francis Xavier, a revered Catholic missionary. The basilica's intricate details
+                and historical significance make it a major tourist and pilgrimage destination in Goa.<br>
+                The Basilica of Bom Jesus is located in Old Goa, approximately 10 kilometers east of Panaji, the capital
+                of Goa. It holds great religious and historical significance as it houses the remains of St. Francis
+                Xavier, a key figure in spreading Christianity in Asia. The basilica is a fine example of baroque
+                architecture and is a UNESCO World Heritage Site, attracting both pilgrims and tourists worldwide. Its
+                feast day, celebrated on December 3rd, commemorates the life of St. Francis Xavier.
+            </div>
+            <div>
+                <h2>Anjuna Market</h2><br>Anjuna Market is a vibrant flea market located in Anjuna, North Goa. It is
+                famous for its lively atmosphere and a wide variety of goods, including clothing, jewelry, handicrafts,
+                and unique souvenirs. The market is held every Wednesday and attracts both locals and tourists, offering
+                a mix of traditional Goan items and eclectic international wares. Its significance lies in its cultural
+                diversity, showcasing the influence of Goa’s hippie era, and serving as a popular destination for
+                bargain hunters and those looking to experience Goa’s colorful market scene.
+            </div>
+            <div>
+                <h2>Baga Beach</h2><br>Baga Beach is a popular beach destination located in North Goa, known for its
+                vibrant nightlife, water sports, and beachside shacks. It is part of the stretch of coastline that
+                includes Calangute and Anjuna beaches. Baga Beach is famous for its lively atmosphere, offering
+                activities like parasailing, jet skiing, and dolphin-watching tours. Its significance lies in being a
+                hotspot for both tourists and locals, attracting party-goers with its clubs and bars, while also
+                offering a laid-back environment during the day for sunbathing and relaxation.
+            </div>
+            <div>
+                <h2>Fort Aguada</h2><br>Fort Aguada is a 17th-century Portuguese fort located in Sinquerim, about 15
+                kilometers from Panaji, Goa. It was built in 1612 to guard against Dutch and Maratha invasions and
+                served as a crucial defense point controlling the entry to the Mandovi River. The fort is strategically
+                located on a hilltop overlooking the Arabian Sea, offering stunning views.<br>
+                Its significance lies in its role as a military stronghold and its historic lighthouse, which is the
+                oldest of its kind in Asia. Today, Fort Aguada is a popular tourist attraction, symbolizing Goa's rich
+                colonial history.
+            </div>
+            <div>
+                <h2>Dudhsagar Waterfall</h2><br>Dudhsagar Waterfall is one of India's tallest waterfalls, located in the
+                Bhagwan Mahavir Wildlife Sanctuary, about 60 kilometers from Panaji, Goa. It cascades down from a height
+                of 310 meters (1017 feet) in a four-tiered formation, resembling a stream of milk, which gives it its
+                name, "Dudhsagar" (Sea of Milk).<br>
+                Its significance lies in its breathtaking beauty, surrounded by lush greenery and the Western Ghats,
+                making it a popular destination for nature lovers and trekkers. The waterfall is also a major attraction
+                for visitors traveling via the nearby railway line, where trains pass by offering spectacular views.
+            </div>
+            <div>
+                <h2>Palolem Beach</h2><br>Palolem Beach, located in South Goa, is renowned for its serene and
+                picturesque setting, characterized by a crescent-shaped shoreline lined with palm trees and soft white
+                sand. Unlike the busier northern beaches, Palolem offers a more tranquil atmosphere, making it popular
+                among those seeking relaxation and natural beauty. The beach is known for its calm waters, ideal for
+                swimming, and its charming beachfront huts. It is also a great spot for activities like kayaking and
+                boat trips to spot dolphins. Palolem's significance lies in its balance of peacefulness and local
+                culture, attracting travelers looking for a more laid-back Goan experience.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const descriptions = document.querySelectorAll('.description div');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slideWidth = slides.querySelector('.slide').offsetWidth;
+            slides.style.transform = `translateX(-${index * slideWidth}px)`;
+
+            descriptions.forEach((desc, idx) => {
+                desc.style.display = idx === index ? 'block' : 'none';
+            });
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < slides.children.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            showSlide(currentIndex);
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = slides.children.length - 1;
+            }
+            showSlide(currentIndex);
+        });
+    </script>
+
+</body>
+
+</html>

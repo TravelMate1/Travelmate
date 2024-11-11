@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa Cultural Insights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .accordion-container {
+            width: 400px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: height 0.5s ease;
+        }
+
+        h2 {
+            text-align: center;
+            color: #01579b;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .accordion {
+            background-color: #0288d1;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            transition: background-color 0.4s ease;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .accordion:hover {
+            background-color: #0277bd;
+        }
+
+        .panel {
+            background-color: #e1f5fe;
+            padding: 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            border-radius: 5px;
+        }
+
+        .panel img {
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .icon {
+            width: 40px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .header-title {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .active-panel {
+            max-height: 300px; /* Adjust this value to control the drop-down size */
+        }
+    </style>
+</head>
+<body>
+
+<div class="accordion-container">
+    <h2>Explore the Culture of Goa</h2>
+
+    <!-- Goan Food Section -->
+    <button class="accordion">
+        <img class="icon" src="https://img.icons8.com/color/48/000000/food.png" alt="Goan Food"> 
+        <span class="header-title">Goan Food</span>
+    </button>
+    <div class="panel">
+        <p><strong>Fish Curry:</strong> A traditional dish made with coconut milk and local spices.</p>
+        <img src="https://cdn.pixabay.com/photo/2020/02/10/19/20/indian-food-4832013_960_720.jpg" alt="Fish Curry">
+    </div>
+
+    <!-- Goan Clothing Section -->
+    <button class="accordion">
+        <img class="icon" src="https://img.icons8.com/color/48/000000/clothes.png" alt="Goan Clothing"> 
+        <span class="header-title">Goan Clothing</span>
+    </button>
+    <div class="panel">
+        <p><strong>Sari & Kashti:</strong> Traditional attire worn by Goan women and men.</p>
+        <img src="https://cdn.pixabay.com/photo/2017/01/06/20/47/beautiful-1958721_960_720.jpg" alt="Goan Sari">
+    </div>
+
+    <!-- Goan Dance Section -->
+    <button class="accordion">
+        <img class="icon" src="https://img.icons8.com/color/48/000000/dancing.png" alt="Goan Dance"> 
+        <span class="header-title">Goan Dance</span>
+    </button>
+    <div class="panel">
+        <p><strong>Fugdi:</strong> A popular folk dance performed by women in Goa.</p>
+        <img src="https://cdn.pixabay.com/photo/2018/02/12/19/25/dancers-3144890_960_720.jpg" alt="Fugdi Dance">
+    </div>
+
+    <!-- Goan Festivals Section -->
+    <button class="accordion">
+        <img class="icon" src="https://img.icons8.com/color/48/000000/carnival.png" alt="Goan Festivals"> 
+        <span class="header-title">Goan Festivals</span>
+    </button>
+    <div class="panel">
+        <p><strong>Carnival:</strong> A colorful festival celebrated with music and street parades.</p>
+        <img src="https://cdn.pixabay.com/photo/2017/11/06/21/52/carnival-2927795_960_720.jpg" alt="Goa Carnival">
+    </div>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var panels = document.getElementsByClassName("panel");
+
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            var panel = this.nextElementSibling;
+
+            // Close all other panels
+            for (var j = 0; j < panels.length; j++) {
+                if (panels[j] !== panel) {
+                    panels[j].style.maxHeight = null;
+                    panels[j].classList.remove("active-panel");
+                }
+            }
+
+            // Toggle the selected panel
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                panel.classList.remove("active-panel");
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                panel.classList.add("active-panel");
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
+
+
+

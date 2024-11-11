@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    background-image: url('train.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.booking-container {
+    text-align: center;
+    background-color: rgb(255, 255, 255,0.2); /* Semi-transparent background */
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.booking-form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.booking-form input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.booking-form input[type="date"],
+.booking-form input[type="number"] {
+    text-align: center;
+}
+
+.search-button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Responsive adjustments for tablets and smaller screens */
+@media (max-width: 768px) {
+    .booking-container {
+        width: 100%; 
+        padding: 15px;
+    }
+
+    .booking-form h2 {
+        font-size: 22px;
+    }
+
+    .booking-form label {
+        font-size: 16px;
+    }
+
+    .booking-form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .search-button {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Additional adjustments for mobile devices */
+@media (max-width: 480px) {
+    .booking-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .booking-form h2 {
+        font-size: 20px;
+    }
+
+    .booking-form label {
+        font-size: 14px;
+    }
+
+    .booking-form input {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .search-button {
+        font-size: 14px;
+        padding: 6px;
+    }
+}

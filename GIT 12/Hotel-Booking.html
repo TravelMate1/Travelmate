@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="./Hotel.css">
+</head>
+<body>
+    <div class="booking-container">
+        <form class="booking-form">
+            <h2>Hotel Booking</h2>
+
+            <label for="from">Destination City</label>
+            <input type="text" id="from" name="from" placeholder="Enter name of city" required>
+
+            <label for="to">Hotel rating</label>
+            <input type="number" id="to" name="to" min="1" max="5"placeholder="Hotel rating you would prefer" required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="Days">Number of Days</label>
+            <input type="number" id="seats" name="seats" min="1" placeholder="Enter no. of days of stay" required>
+
+            <button type="submit" class="search-button">Search Hotels</button>
+        </form>
+    </div>
+</body>
+</html>
