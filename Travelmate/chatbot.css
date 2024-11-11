@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Chatbox container */
+.chatbox {
+    position: fixed;
+    z-index: 2000;
+    bottom: 0;
+    right: -300px; /* Hidden initially */
+    width: 300px;
+    height: 400px;
+    background-color: #333;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Chatbox header */
+.chatbox-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer; /* Make it clickable */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out the items */
+    align-items: center; /* Center items vertically */
+}
+
+/* Chatbox body */
+.chatbox-body {
+    padding: 10px;
+    flex-grow: 1;
+    overflow-y: auto;
+    color: white;
+    font-size: 14px;
+}
+
+/* Chatbox input area */
+.chatbox-input {
+    padding: 10px;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+}
+
+/* Input box styling */
+.chatbox-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+/* Submit button (arrow) */
+.chatbox-input button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    margin-left: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Arrow icon */
+.chatbox-input button i {
+    font-size: 16px;
+}
+
+/* Slide button to open chatbox */
+.open-chatbox-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    background-color: rgba(0, 123, 255, 0.6); /* More transparent */
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 50px; /* Smaller button, more fitting for text */
+    text-align: center;
+    font-size: 12px;
+    width: 150px;
+    height: 40px;
+    line-height: 20px; /* Adjusted to center text properly */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+.open-chatbox-btn:hover {
+    background-color: rgba(0, 123, 255, 0.8); /* More opaque on hover */
+}
+
+/* Curly back arrow styling */
+.back-arrow {
+    font-size: 20px; /* Adjust size as needed */
+    margin-left: 4px; /* Space between title and arrow */
+}
