@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("form");
 
-    // Dummy credentials for testing
+    // Spoof credentials
     const dummyUsers = [
         { username: "admin", password: "admin123" },
         { username: "testuser", password: "test123" },
